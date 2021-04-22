@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashero</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1>Flashero</h1>
+        <!-- img icon -->
+      </div>
+
+      <nav>
+        <ul>
+          <!-- Hide Home, username, logout kalau selain login/register -->
+          <a href=""><li>About</li></a>
+          <a href=""><li>Home</li></a> 
+          <a href=""><li>lilynano</li></a>
+          <a href=""><li>Logout</li></a>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="login-page" class="page form-page">
+        <h2>Login</h2>
+        <form>
+          <label for="username-login">Username:</label><br>
+          <input type="text" id="username-login" required><br><br>
+
+          <label for="password-login">Password:</label><br>
+          <input type="password" id="password-login" required><br><br><br>
+
+          <input type="submit" value="Login">
+        </form> 
+        <br>
+        <p>Don't have an account yet? <a href="">Register a new account!</a> </p>
+    </div>
+
+    <div id="register-page" class="page form-page">
+      <h2>Register</h2>
+      <form>
+        <label for="username-reg">Username:</label><br>
+        <input type="text" id="username-reg" required><br><br>
+
+        <label for="email-reg">Email:</label><br>
+        <input type="email" id="email-reg" placeholder="example@mail.com" required><br><br>
+
+        <label for="password-reg">Password:</label><br>
+        <input type="password" id="password-reg" required><br><br><br>
+
+        <input type="submit" value="Register">
+      </form> 
+      <br>
+      <p>Already have an account? <a href="">Login with your account now!</a> </p>
+    </div>
+
+    <div id="profile-page" class="page form-page">
+
+      <h2>lilynano Profile</h2>
+      <hr>
+
+      <table id="profile-table">
+        <tr>
+          <td>Level:</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>EXP:</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Next Level:</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Finishing a Deck:</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Card Mastered:</td>
+          <td>0</td>
+        </tr>
+      </table>
+
+      <button class ="standalone-button">Return to My Collection</button>
+    </div>
+
+    <div id="main-page" class="page">
+      <h2>My Decks Collection</h2>
+      <ul>
+        <a href=""><li>Create a New Deck</li></a>
+        <a href=""><li>Add a New Card</li></a>
+      </ul>
+      <table id="collection-table">
+        <tr>
+          <th>Name</th>
+          <th>Total Cards</th>
+        </tr>
+        <tr>
+          <td><a href="">Deck 1</a></td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td><a href="">Deck 2</a></td>
+          <td>45</td>
+        </tr>
+      </table> 
+    </div>
+
+    <div id="deck-page" class="page form-page">
+
+      <h2>Deck 1</h2>
+      <hr>
+      <ul>
+        <a href=""><li>Edit Name</li></a>
+        <a href=""><li>Browse</li></a>
+        <a class="delete-option" href=""><li>Delete This Deck</li></a>
+      </ul>
+      <div class="detail-deck">
+        <h3>Total Cards</h3>
+        <h3>40</h3>
+      </div>
+      <div class="detail-deck">
+        <h3>Cards to Clear</h3>
+        <h3>23</h3>
+      </div>
+
+      <button class = "button-pair">Start!</button>
+      <button class = "button-pair">Cancel</button>
+    </div>
+
+    <div id="add-page" class="page form-page">
+      <h2>Add a New Card</h2>
+      <form>
+
+        <label for="deck-to-add">Select a Deck to Add:</label><br><br>
+        <select id="deck-to-add">
+          <option>Deck 1</option>
+          <option>Deck 2</option>>
+        </select>
+        <br><br>
+
+        <label for="front-add">Front:</label><br>
+        <div id="front-add" class="textarea" contenteditable="true"></div>
+        <br><br>
+  
+        <label for="back-add">Back:</label><br>
+        <div id="back-add" class="textarea" contenteditable="true"></div>
+        <br><br>
+        
+        <input class = "button-pair" type="submit" value="Add">
+        <button class = "button-pair">Cancel</button>
+      </form> 
+    </div>
+
+    
+    <div id="deck-cardlist-page" class="page">
+      <h2>Deck 1 Cards</h2>
+      <input id="card-search" type="text" placeholder="Search a card in this deck">
+      <button><i class="fa fa-search"></i></button>
+      <br><br>
+
+      <table id="deck-table">
+        <tr>
+          <th>Front</th>
+          <th>Back</th>
+        </tr>
+        <tr class="card-row">
+          <td>元気</td>
+          <td>(gen-ki) Baik, sehat</td>
+        </tr>
+        <tr class="card-row">
+          <td>私</td>
+          <td>(watashi) Saya, aku</td>
+        </tr>
+        <tr class="card-row">
+          <td>面白い</td>
+          <td>(omo-shiro-i) Menarik</td>
+        </tr>
+        <tr class="card-row">
+          <td>楽しい</td>
+          <td>(tano-shii) Menyenangkan</td>
+        </tr>
+      </table> 
+    </div>
+
+    <div id="edit-page" class="page form-page">
+      <h2>Card Edit</h2>
+      <a class="delete-option" href="">Delete This Card</a>
+      <br><br>
+      <form>
+        <label for="front-edit">Front:</label><br>
+        <div id="front-edit" class="textarea" contenteditable="true">面白い</div>
+        <br><br>
+  
+        <label for="back-edit">Back:</label><br>
+        <div id="back-edit" class="textarea" contenteditable="true">(omo-shiro-i) Menarik</div>
+        <br><br>
+        
+        <input class = "button-pair" type="submit" value="Edit">
+        <button class = "button-pair">Cancel</button>
+      </form> 
+    </div>
+
+    <div id="study-deck-page" class="page form-page">
+      <i class="fa fa-arrow-left fa-2x"></i>
+      <div id="card-problem">
+        <p id="card-front">面白い</p>
+        <hr>
+        <p id="card-back">(omo-shiro-i) Menarik ( hanya tampil setelah show answer ditekan ), tombol show answer akan tergantikan oleh 3 tombol dibawahnya saat ditekan</p>
+      </div>
+
+      <div id="show-after-answer">
+        <button class="standalone-button">Show Answer</button> <br>
+        <button class="button-trio">Again</button>
+        <button class="button-trio">Hard</button>
+        <button class="button-trio">Good</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+</html>

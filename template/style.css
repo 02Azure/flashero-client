@@ -1,0 +1,263 @@
+@import "https://fonts.googleapis.com/css2?family=Neucha&display=swap";
+
+/* TAG STYLING */
+html {
+  background-color: azure;
+  font-family: Neucha, "Comic Sans MS";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.4em;
+  margin:0 15px;
+  padding: 0;
+  color: peachpuff;
+}
+
+h2 {
+  font-size: 1.9em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+button, input[type=submit] {
+  cursor: pointer;
+}
+
+input, label, p, tr, td, th, button, select{
+  font-size: 1.2em;
+}
+
+table {
+  border: 2px solid black;
+  margin: auto;
+  min-width: 400px;
+  width: 75%;
+}
+
+table, th, td {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: gainsboro;
+}
+
+th, td {
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: lightcyan;
+}
+
+tr:nth-child(odd) {
+  background-color: lightblue;
+}
+
+.page {
+  margin: 70px auto;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+
+/* NAV BAR */
+header{  
+  background-color:steelblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+nav ul {
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+nav ul li {
+  color:palegreen;
+  margin-right: 15px;
+  transition: all 0.4s;
+}
+
+nav ul li:hover {
+  color:yellow;
+  transform: scale(1.15);
+}
+
+/* PAGE WITH FORM */
+.form-page{
+  background-color:lightblue;
+  min-width: 400px;
+  width: 45vw;
+  border: solid black 2px;
+}
+
+#login-page form input, #register-page form input{
+  height: 2em;
+  width: 200px
+}
+
+/* PROFILE PAGE */
+#profile-table {
+  border: none;
+}
+
+#profile-table tr {
+  background-color: transparent;
+}
+
+#profile-table tr td:nth-child(1){
+  text-align: left;
+}
+
+#profile-table tr td:nth-child(2){
+  text-align: right;
+}
+
+.standalone-button{
+  margin: 15px 0;
+  width: 50%;
+  height: 2em;
+}
+
+/* DECK COLLECTION PAGE */
+
+#main-page ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-page ul li{
+  margin: 0 10px 15px 10px;
+  font-size: 1.2em;
+}
+
+/* EDIT DECK PAGE */
+h2:hover i{
+  visibility: visible;
+}
+
+#deck-page ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#deck-page ul li{
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+.delete-option {
+  color: red;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.detail-deck {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-deck h3{
+  margin: 25px 0;
+}
+
+/* ADD / EDIT CARD PAGE */
+.button-pair{
+  width: 25%;
+  height: 2em;
+}
+
+.textarea {
+  font-size: 1.4em;
+  margin: auto;
+  text-align:left;
+  width: 50%;
+  min-height: 2.8em;
+  background-color: white;
+  border: solid black 1px;
+}
+
+/* DECK CARD LIST PAGE */
+#deck-cardlist-page button {
+  padding: 3px 25px;
+}
+
+#card-search {
+  height: 1.5em;
+  width: 50%;
+}
+
+#deck-table .card-row{
+  cursor: pointer;
+  border-top:solid transparent 2px;
+  border-bottom:solid transparent 2px;
+}
+
+.card-row:last-child {
+  border-bottom:solid black 2px !important;
+}
+
+.card-row:hover {
+  border-top: double blue 2px !important;
+  border-bottom: double blue 2px !important;
+  border-right: solid blue 2px;
+  border-left: solid blue 2px;
+}
+
+/* STUDY DECK PAGE */
+#study-deck-page {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh
+}
+
+#card-front{
+  font-size: 2.3em;
+}
+
+#card-back {
+  font-size: 1.5em;
+}
+
+#show-after-answer button {
+  height: 2em;
+  margin: 10px 15px;
+}
+
+.fa-arrow-left {
+  cursor: pointer;
+  position: absolute;
+  text-align: left;
+}
+
+.button-trio {
+  width: 25%;
+}
