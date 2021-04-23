@@ -5,7 +5,7 @@
       <a href="#" data-bs-toggle="modal" data-bs-target="#deckformmodal"><li>Create a New Deck</li></a>
       <a href="#" data-bs-toggle="modal" data-bs-target="#importdeckmodal"><li>Import Deck</li></a>
     </ul>
-    <table id="collection-table">
+    <table v-if="decks.length" id="collection-table">
       <tr>
         <th>Name</th>
         <th>Total Cards</th>
@@ -18,6 +18,7 @@
         <td>{{ deck.Cards.length }}</td>
       </tr>
     </table>
+    <h3 id="no-deck-msg" v-else>Looks like you don't have any deck for now... If you are a newcomer, try to read About page and/or press the Import Deck above then import Tutorial deck!</h3>
     <DeckForm @submitAction="createDeck" />
     <ImportForm />
   </div>
@@ -54,5 +55,11 @@ export default {
   h2 {
     font-size: 1.9em;
     font-weight: bolder;
+  }
+
+  #no-deck-msg {
+    margin-top:1em !important;
+    margin:auto;
+    width: 75vw;
   }
 </style>

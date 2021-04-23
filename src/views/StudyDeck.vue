@@ -115,7 +115,7 @@ export default {
   display:flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 70vh
+  min-height: 70vh
 }
 
 #card-front{
@@ -134,6 +134,7 @@ export default {
 .fa-arrow-left {
   cursor: pointer;
   position: absolute;
+  top: 1%;
   text-align: left;
 }
 

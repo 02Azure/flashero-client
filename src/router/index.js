@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import About from '../views/About.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import User from '../views/User.vue'
@@ -18,6 +19,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About
   },
   {
     path: '/login',
@@ -73,7 +79,9 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if ((to.name === 'Login' || to.name === 'Register') && localStorage.access_token) {
+  if (to.name === 'About') {
+    next()
+  } else if ((to.name === 'Login' || to.name === 'Register') && localStorage.access_token) {
     next({ name: 'Home' })
   } else if ((to.name !== 'Login' && to.name !== 'Register') && !localStorage.access_token) {
     next({ name: 'Login' })
